@@ -1,1 +1,9 @@
-Code folgt
+Tippsieger guesses based on the betting odds.
+
+Submit guesses by calling guess.rb
+
+tippsieger.rb expects a config.rb file with the bot token and odds host and path, e.g.
+
+  BOT_TOKEN = "..."
+  ODDS_HOST = "www.host.de"
+  ODDS_PATH = "/path/to/odds"
