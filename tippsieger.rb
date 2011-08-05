@@ -52,11 +52,11 @@ class Tippsieger < BotLigaGuesser
     if odds[[name_team1, name_team2, date_string]]
       odds_home, odds_draw, odds_away = odds[[name_team1, name_team2, date_string]]
       if odds_home > odds_draw and odds_away > odds_draw
-        num_goals = rand(3).round
+        num_goals = (rand * 2.7).round
         return [num_goals, num_goals]
       else
         difference = ((odds_home - odds_away).abs / 3.0).round + 1
-        num_goals = rand(2).round
+        num_goals = (rand * 1.5 + 0.2).round
         return [
           num_goals + (odds_home < odds_away ? difference : 0),
           num_goals + (odds_home > odds_away ? difference : 0),
